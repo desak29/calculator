@@ -1,8 +1,7 @@
-
 $(document).ready(function(){
 
 	document.onkeyup = keyCheck;
-            
+
 	function keyCheck(){
 		var keyID = event.keyCode;
 		// console.log(keyID);
@@ -80,9 +79,19 @@ function doIt(){
 	}
 	$('.screen').val(total);
 }
-var memory=0;
-// on click clear memory 
-$('.c').click(function (){
-	memory = 0;
-	$('#screen').val("0");
+
+$('.digit').click(function(e) {
+	screen(e.target.value);
 });
+$('#divide, #multiply, #minus, #plus').click(function(e) {
+	calculate(e.target.value);
+});
+$('=').click(function() {
+	result();
+});
+
+
+
+
+
+
