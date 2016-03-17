@@ -46,3 +46,8 @@ body{
 .operator{
     background-color:orange;
 }
+#meaning{
+    left:-1000px;
+    transition:all 5s ease;
+    
+}
